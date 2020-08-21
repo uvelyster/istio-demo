@@ -12,6 +12,8 @@ ENTRYPOINT [ "python" ]
 
 ARG ver=NA
 
+EXPOSE 5000
+
 ENV VERSION=$ver
 
 CMD [ "app.py" ]
