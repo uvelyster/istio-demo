@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 def main():
     currentDT = datetime.datetime.now()
-    return "ver=1.0 Welcome user! current time is {} ".format(os.environ['VERSION'],str(currentDT))
+    return "ver=2.0 Welcome user! current time is {} ".format(os.environ['VERSION'],str(currentDT))
 
 @app.route("/health")
 def health():
