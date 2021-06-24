@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-dep60
+  labels:
+    app: webapp
+    version: v6.0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+        version: v6.0
+    spec:
+      containers:
+      - name: webapp
+        image: myregistry.com/webapp:6.0
+        ports:
+        - containerPort: 5000
