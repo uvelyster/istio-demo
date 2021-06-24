@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: myregistry.com:5000/frontend:1.0
+        image: myregistry.com/frontend:1.0
         ports:
         - containerPort: 8080
 
