@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: myregistry.com/webapp:6.0
+        image: myregistry.com:5000/webapp:6.0
         ports:
         - containerPort: 5000

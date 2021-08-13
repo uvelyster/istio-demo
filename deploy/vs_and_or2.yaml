@@ -6,15 +6,20 @@ spec:
   hosts:
     - webservice
   http:
+  - route:
+    - destination:
+        host: webservice
+        subset: v0 
   - match:
     - headers:
         x-upgrade:
           exact: "TRUE"
+    - queryParams:
+        ver:
+          exact: v1
+      method:
+        exact: GET
     route:
     - destination:
         host: webservice
         subset: v1
-  - route:
-    - destination:
-        host: webservice
-        subset: v0

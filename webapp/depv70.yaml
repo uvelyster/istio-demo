@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp-dep62
+  name: webapp-dep71
   labels:
-    version: v6.2
     app: webapp
+    version: v7.1
 spec:
   replicas: 1
   selector:
@@ -14,10 +14,10 @@ spec:
     metadata:
       labels:
         app: webapp
-        version: v6.2
+        version: v7.1
     spec:
       containers:
       - name: webapp
-        image: myregistry.com:5000/webapp:6.2
+        image: myregistry.com:5000/webapp:7.1
         ports:
         - containerPort: 5000

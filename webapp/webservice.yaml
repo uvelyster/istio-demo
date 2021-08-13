@@ -6,8 +6,8 @@ spec:
   selector:
     app: webapp
   ports:
-  - name: http-webservice
-    protocol: TCP
+  - protocol: TCP
     port: 80
     targetPort: 5000
+    name: http-webservice
   type: NodePort

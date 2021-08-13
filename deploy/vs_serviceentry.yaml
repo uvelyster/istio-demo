@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: wiki-vs
+spec:
+  hosts:
+  - en.wikipedia.org
+  tls:
+  - match:
+     - port: 443
+       sniHosts:
+       - en.wikipedia.org
+    route:
+    - destination:
+        host: en.wikipedia.org
+        port:
+          number: 443

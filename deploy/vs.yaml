@@ -9,4 +9,4 @@ spec:
   - route:
     - destination:
         host: webservice
-        subset: v1  
+        subset: v1

@@ -10,6 +10,11 @@ spec:
     - headers:
         x-upgrade:
           exact: "TRUE"
+    - queryParams:
+        ver:
+          exact: v1
+      method:
+        exact: GET
     route:
     - destination:
         host: webservice

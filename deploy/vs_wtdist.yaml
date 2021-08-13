@@ -6,15 +6,12 @@ spec:
   hosts:
     - webservice
   http:
-  - match:
-    - headers:
-        x-upgrade:
-          exact: "TRUE"
-    route:
-    - destination:
-        host: webservice
-        subset: v1
   - route:
     - destination:
         host: webservice
+        subset: v1
+      weight: 25
+    - destination:
+        host: webservice
         subset: v0
+      weight: 75
