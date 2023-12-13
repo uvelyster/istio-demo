@@ -19,3 +19,13 @@ spec:
         image: myregistry.com/webapp:4.0
         ports:
         - containerPort: 5000
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 40
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 5000
+          initialDelaySeconds: 120
